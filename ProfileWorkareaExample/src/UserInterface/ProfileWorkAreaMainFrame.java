@@ -77,7 +77,7 @@ public class ProfileWorkAreaMainFrame extends javax.swing.JFrame {
 
         UserNameTextField.setText("admin");
 
-        PasswordTextField.setText("****");
+        PasswordTextField.setText("1234");
         PasswordTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PasswordTextFieldActionPerformed(evt);
@@ -138,7 +138,7 @@ public class ProfileWorkAreaMainFrame extends javax.swing.JFrame {
         String pw = PasswordTextField.getText();
 
         UserAccountDirectory uad = business.getUserAccountDirectory();
-        UserAccount useraccount = uad.AuthenticateUser(un, pw);
+        UserAccount useraccount = uad.authenticateUser(un, pw);
         if (useraccount == null) {
             return;
         }
